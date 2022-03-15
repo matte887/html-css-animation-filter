@@ -123,12 +123,31 @@
     to {transform: rotate(360deg);}
 }
 
-
-
-
+/* Exercise 11 */
 .ex-11-icon {
     font-size: 60px;
 }
+
+.ex-11-icon:hover {
+    animation-name: fast;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+@keyframes fast {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    90% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -158,3 +177,98 @@
     width: 60px;
     height: 20px;
 }
+
+/* Exercise 12 */
+.ex-12-button:hover .ex-12-top-white, .ex-12-bottom-white  {
+    animation-duration: 2s;
+    animation-timing-function: linear;    
+}
+
+.ex-12-button:hover .ex-12-top-white{
+    animation-name: move-right;
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+    animation-name: move-left;
+}
+
+@keyframes move-right {
+    0% {left: 10%;}
+    50% {left: 65%;}
+    100% {left: 10%;}
+}
+
+@keyframes move-left {
+    0% {right: 20%;}
+    50% {right: 65%;}
+    100% {right: 20%;}
+}
+
+/* Exercise 13 */
+.ex-13-button:hover .ex-13-top-white, .ex-13-bottom-white  {
+    animation-duration: 2s;
+    animation-timing-function: linear;    
+}
+
+.ex-13-button:hover .ex-13-top-white{
+    animation-name: move-r;
+}
+
+.ex-13-button:hover .ex-13-bottom-white {
+    animation-name: move-l;
+}
+
+@keyframes move-r {
+    0% {
+        top: -10px;
+        left: 10%;
+    }
+    20% {
+        top: -10px;
+        left: 90%;
+    }
+    40% {
+        top: 55px;
+        left: 90%;
+    }
+    60% {
+        top: 55px;
+        left: -5%;
+    }
+    80% {
+        top: -10px;
+        left: -5%;
+    }
+    100% {
+        top: -10px;
+        left: 10%;
+    }
+}
+
+@keyframes move-l {
+    0% {
+        bottom: -10px;
+        right: 20%;
+    }
+    20% {
+        bottom: -10px;
+        right: 80%;
+    }
+    40% {
+        bottom: 54px;
+        right: 80%;
+    }
+    60% {
+        bottom: 54px;
+        right: -10%;
+    }
+    80% {
+        bottom: -10px;
+        right: -10%;
+    }
+    100% {
+        bottom: -10px;
+        right: 20%;
+    }
+}
+
